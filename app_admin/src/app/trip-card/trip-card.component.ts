@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { Trip } from '../models/trip';
 import { AuthenticationService } from '../services/authentication';
 
@@ -14,10 +14,10 @@ export class TripCardComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthenticationService
+    private authenticationService: AuthenticationService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   public editTrip(trip: Trip): void {
@@ -27,7 +27,7 @@ export class TripCardComponent implements OnInit {
   }
 
   public isLoggedIn(): boolean {
-    return this.authService.isLoggedIn();
+    return this.authenticationService.isLoggedIn();
   }
 
 }

@@ -14,13 +14,13 @@ export class HomeComponent implements OnInit{
     private authService: AuthenticationService
   ) {}
 
-ngOnInit(){
+  ngOnInit(){
 
-}
+  }
 
-public isLoggedIn(): boolean{
-  return this.authService.isLoggedIn();
-}
+  public isLoggedIn(): boolean{
+    return this.authService.isLoggedIn();
+  }
   
 
 

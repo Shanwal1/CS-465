@@ -59,6 +59,7 @@ process.on('SIGTERM', () => {
 // Make initial connection to DB  
 connect();  
 
+//bring in the Mongoose Schema
 require('./travlr');
 require('./user');
 

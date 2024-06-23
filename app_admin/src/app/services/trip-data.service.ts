@@ -35,7 +35,7 @@ export class TripDataService {
   }
       
     
-  getTrip(tripCode: String): Promise<Trip>{
+  public getTrip(tripCode: String): Promise<Trip>{
     console.log('Inside TripDataService #get Trip(trip code)');
     return this.http
       .get(this.tripUrl + tripCode)
@@ -54,7 +54,7 @@ export class TripDataService {
   }
 
 
-  updateTrip(formData:Trip): Promise<Trip>{
+  public updateTrip(formData:Trip): Promise<Trip>{
     const httpOptions ={
       headers: new HttpHeaders({
         'Authorization' : `Bearer ${this.storage.getItem('travlr-token')}`
@@ -78,10 +78,12 @@ export class TripDataService {
     return this.makeAuthApiCall('login', user);
   }
 
-public register(user:User): Promise<AuthResponse>{
-  return this.makeAuthApiCall('register', user);
-}
- private makeAuthApiCall(urlPath: string, user: User): Promise<AuthResponse>{
+  public register(user:User): Promise<AuthResponse>{
+    return this.makeAuthApiCall('register', user);
+  } 
+  
+  private makeAuthApiCall(urlPath: string, user: User): 
+      Promise<AuthResponse>{
       const url: string=`${this.apiBaseUrl}/${urlPath}`;
       return this.http
         .post(url, user)

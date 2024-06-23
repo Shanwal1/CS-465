@@ -1,6 +1,6 @@
 require('../models/db');
 const express = require('express'); //Express app
-const router = express.Router(); //Router Logix
+const router = express.Router(); 
 const jwt = require("express-jwt");
 
 const auth = jwt({

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
   
 })
 
